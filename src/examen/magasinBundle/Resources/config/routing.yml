@@ -1,0 +1,39 @@
+magasin_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: magasinBundle:Default:index }
+
+
+magasin_affichage:
+    path:     /acceuil
+    defaults: { _controller: magasinBundle:magasin:affichermagasin }
+    
+    
+    
+magasin_modification:
+    path:     /modifier/{id}
+    defaults: { _controller: magasinBundle:magasin:modifier }
+    
+    
+        
+magasin_suppression:
+    path:     /supprimer/{id}
+    defaults: { _controller: magasinBundle:magasin:supprimermagasin }
+    
+    
+    
+
+    
+    
+magasin_recherche:
+    path:     /rechercher/
+    defaults: { _controller: magasinBundle:magasin:recherchermagasin }
+    
+    
+magasin_promo:
+    path:     /promo/{id}
+    defaults: { _controller: magasinBundle:magasin:ajouterpromotion }
+    
+    
+magasin_promoprix:
+    path:     /calculer/{id}
+    defaults: { _controller: magasinBundle:magasin:calculer }

@@ -1,0 +1,35 @@
+{% extends '::layout.html.twig' %}
+{% block content %}
+
+    <center><h1>Liste des lots</h1></center>
+<center>
+    <table border="1" >
+    <tr>
+        <td><center>libelle </center></td> 
+        <td><center> Date Ajout </center> </td> 
+        <td><center>Quantite</center></td>  
+        <td><center> Prix lot </center></td> 
+        <td><center> modifier lot</center></td> 
+        <td><center>supprimer lot</center></td>
+        <td><center>ajouter promo</center></td>
+        <td><center>prix unitaire produit</center></td>
+    </tr>   
+    
+    <tr>
+        {% for magasinx in magasin %}
+            <td><center>{{magasinx.libelle}}</center></td>
+             <td><center>{{magasinx.dateajout|date('Y-m-d')}}</center></td>
+            <td><center>{{magasinx.quantite}}</center></td>
+            <td><center>{{magasinx.prixlot}}</center></td>
+            <td><center><a href="{{path('magasin_modification',{'id':magasinx.id})}}">modifier</a></center></td>
+            <td><center><a href="{{path('magasin_suppression',{'id':magasinx.id})}}">supprimer</a></center></td>
+            <td><center><a href="{{path('magasin_promo',{'id':magasinx.id})}}">ajouter</a></center></td>
+            <td><center><a href="{{path('magasin_promoprix',{'id':magasinx.id})}}">calculer</a></center></td>        
+       
+    </tr>
+ 
+     {% endfor %}   
+</table>
+
+</center>
+    {% endblock %} 

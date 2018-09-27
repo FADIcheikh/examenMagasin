@@ -1,0 +1,9 @@
+
+{% extends '::layout.html.twig' %}
+{% block content %}
+     <Form method="POST" action="{{path('magasin_promo',{'id':magasin.id})}}">
+        promotion : <INPUT type="text" name="promotion" id="promotion">
+        <INPUT type="submit" value="valider">
+    </FORM>
+    
+    {% endblock %} 

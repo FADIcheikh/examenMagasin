@@ -1,0 +1,9 @@
+{% extends '::layout.html.twig' %}
+{% block content %}
+    <br><br><br><br><br><br>
+<center><h1>modifier un lot </h1>
+    <form method='POST' action="{{path('magasin_modification',{id:magasin.id})}}" >
+{{form_widget(form)}}
+    </form>
+</center>
+    {% endblock %} 

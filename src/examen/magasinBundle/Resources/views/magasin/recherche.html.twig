@@ -1,0 +1,35 @@
+{% extends '::layout.html.twig' %}
+{% block content %}
+    <center>
+    <Form method="POST" action="{{path('magasin_recherche')}}">
+        rechercher : <INPUT type="text" name="libelle" id="libelle">
+        <INPUT type="submit" value="rechercher">
+    </FORM>
+    </center><br><br>
+<center>
+    <table border="4" >
+        
+    <tr>
+        <td><center>libelle </center></td> 
+        <td><center> Date Ajout </center> </td> 
+        <td><center>Quantite</center></td>  
+        <td><center> Prix lot </center></td> 
+        
+    </tr>   
+        
+    
+    <tr>
+        {% for magasinx in magasin %}
+            <td><center>{{magasinx.libelle}}</center></td>
+            <td><center>{{magasinx.dateajout|date('Y-m-d')}}</center></td>
+            <td><center>{{magasinx.quantite}}</center></td>
+            <td><center>{{magasinx.prixlot}}</center></td>
+       
+       
+    </tr>
+ 
+     {% endfor %}   
+</table>
+
+</center>
+    {% endblock %} 

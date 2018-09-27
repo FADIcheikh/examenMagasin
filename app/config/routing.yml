@@ -1,0 +1,4 @@
+magasin:
+    resource: "@magasinBundle/Resources/config/routing.yml"
+    prefix:   /
+
